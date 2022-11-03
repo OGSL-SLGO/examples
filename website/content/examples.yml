@@ -1,0 +1,19 @@
+- title: Visualisation de données CTD (séries temporelles) - Partie 1
+  description: Exploration et sélection de données dans un jeu de données
+  source_code_url: https://github.com/etcax-test/test-examples/tree/main/examples
+  binder_url: https://mybinder.org/v2/gh/etcax-test/test-examples/main?labpath=examples%2Fexemple_1.ipynb
+  tags: 
+    - océanographie
+    - erddap
+    - python
+    - plotly
+
+- title: Visualisation de données CTD (séries temporelles) - Partie 2
+  description: Affichage de données CTD sous forme de série temporelle
+  source_code_url: https://github.com/etcax-test/test-examples/tree/main/examples
+  binder_url: https://mybinder.org/v2/gh/etcax-test/test-examples/main?labpath=examples%2Fexemple_2.ipynb
+  tags: 
+    - océanographie
+    - erddap
+    - python
+    - plotly
