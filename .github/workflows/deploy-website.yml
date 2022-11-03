@@ -36,7 +36,7 @@ jobs:
       - uses: actions/cache@v3
         id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
-          path: ./doc-builder/node_modules
+          path: ./website/node_modules
           key: ${{ runner.os }}-yarn-${{ hashFiles('./doc-builder/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
@@ -45,14 +45,14 @@ jobs:
       - name: Install dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true' 
         run: yarn install
-        working-directory: doc-builder
+        working-directory: website
       - name: Static HTML export with Nuxt
         run: yarn generate
-        working-directory: doc-builder
+        working-directory: website
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./doc-builder/.output/public
+          path: ./website/.output/public
 
   # Deployment job
   deploy:
