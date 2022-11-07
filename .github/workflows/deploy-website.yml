@@ -37,7 +37,7 @@ jobs:
         id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
           path: ./website/node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('./doc-builder/yarn.lock') }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('./website/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
       - name: Setup Pages
