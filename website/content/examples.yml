@@ -2,7 +2,8 @@
   description: Exploration et sélection de données dans un jeu de données
   source_code_url: https://github.com/ogsl-slgo/examples/tree/first-example/examples/ctd-time-series
   binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/first-example?labpath=examples%2Fctd-time-series%2Fexemple_1.ipynb
-  tags: 
+  card_image_url: /examples/ctd-time-series/example_1.png
+  tags:
     - océanographie
     - erddap
     - python
@@ -12,7 +13,8 @@
   description: Affichage de données CTD sous forme de série temporelle
   source_code_url: https://github.com/ogsl-slgo/examples/tree/first-example/examples/ctd-time-series
   binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/first-example?labpath=examples%2Fctd-time-series%2Fexemple_2.ipynb
-  tags: 
+  card_image_url: /examples/ctd-time-series/example_2.png
+  tags:
     - océanographie
     - erddap
     - python

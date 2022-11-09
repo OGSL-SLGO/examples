@@ -52,14 +52,19 @@ const filteredExamples = computed(() => {
     </div>
     <div class="card-container">
       <div class="card" v-for="example in filteredExamples" :key="example.title">
-        <h1>{{ example.title }}</h1>
-        <p style="margin-bottom: 10px">
-          {{ example.description }}
-        </p>
-        <div style="margin-bottom: 10px;"><span class="tag" v-for="tag in example.tags">{{ tag }}</span></div>
-        <a target="_blank" :href="example.source_code_url" class="link-button" style="margin-right: 10px;">Aller vers le
-          code source</a>
-        <a target="_blank" :href="example.binder_url" class="link-button">Lancer avec Binder</a>
+        <div class="card-image"><img :src="example.card_image_url" /></div>
+        <div class="card-description">
+          <h1>{{ example.title }}</h1>
+          <p style="margin-bottom: 10px">
+            {{ example.description }}
+          </p>
+          <div style="margin-bottom: 10px;"><span class="tag" v-for="tag in example.tags" :key="tag">{{ tag }}</span>
+          </div>
+          <a target="_blank" :href="example.source_code_url" class="link-button" style="margin-right: 10px;">Aller vers
+            le
+            code source</a>
+          <a target="_blank" :href="example.binder_url" class="link-button">Lancer avec Binder</a>
+        </div>
       </div>
     </div>
   </div>
@@ -91,23 +96,70 @@ const filteredExamples = computed(() => {
 }
 
 .card-container {
-  padding: 10px;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+
+  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+
+  @media screen and (min-width: 550px) {
+    display: grid;
+    column-gap: 1rem;
+    padding: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
 }
 
 .card {
   border: 1px solid #dddddd;
-  padding: 20px;
   border-radius: 10px;
   background-color: #f1faff;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 550px) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 200px;
+  }
+}
+
+.card-image {
+  >img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100px;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: 550px) {
+    grid-column: 1;
+
+    >img {
+      height: 100%;
+    }
+  }
+}
+
+.card-description {
+  padding: 10px;
 
   >h1 {
+    font-size: 1.2em;
     margin-top: 0px;
     color: #00adef
   }
+
+  @media screen and (min-width: 550px) {
+    grid-column: 2;
+    padding: 20px;
+
+    >h1 {
+      font-size: 1.5em;
+    }
+  }
+
 }
+
+
 
 .tag {
   display: inline-block;
