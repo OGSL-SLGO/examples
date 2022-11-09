@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from 'vue'
+
+const runtimeConfig = useRuntimeConfig();
+
 const queryResult = await queryContent().where({ _file: "examples.yml" }).only(['body']).find()
 const allExamples = queryResult[0].body
 
@@ -52,7 +55,7 @@ const filteredExamples = computed(() => {
     </div>
     <div class="card-container">
       <div class="card" v-for="example in filteredExamples" :key="example.title">
-        <div class="card-image"><img :src="example.card_image_url" /></div>
+        <div class="card-image"><img :src="runtimeConfig.app.baseURL + example.card_image_url" /></div>
         <div class="card-description">
           <h1>{{ example.title }}</h1>
           <p style="margin-bottom: 10px">
