@@ -1,6 +1,6 @@
 - title: Visualisation de données CTD (séries temporelles) - Partie 1
   description: Exploration et sélection de données dans un jeu de données
-  context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-time-series/README.md
+  context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-time-series/
   source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-time-series/partie_1.ipynb
   binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fctd-time-series%2Fpartie_1.ipynb
   card_image_url: examples/ctd-time-series/example_1.png
@@ -12,7 +12,7 @@
 
 - title: Visualisation de données CTD (séries temporelles) - Partie 2
   description: Affichage de données CTD sous forme de série temporelle
-  context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-time-series/README.md
+  context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-time-series/
   source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-time-series/partie_2.ipynb
   binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fctd-time-series%2Fpartie_2.ipynb
   card_image_url: examples/ctd-time-series/example_2.png
