@@ -63,10 +63,12 @@ const filteredExamples = computed(() => {
           </p>
           <div style="margin-bottom: 10px;"><span class="tag" v-for="tag in example.tags" :key="tag">{{ tag }}</span>
           </div>
-          <a target="_blank" :href="example.source_code_url" class="link-button" style="margin-right: 10px;">Aller vers
-            le
-            code source</a>
+          <a target="_blank" :href="example.context_url" class="link-button" style="margin-right: 10px;">Contexte</a>
+          <a target="_blank" :href="example.source_url" class="link-button" style="margin-right: 10px;">Aller vers
+            le notebook</a>
           <a target="_blank" :href="example.binder_url" class="link-button">Lancer avec Binder</a>
+
+
         </div>
       </div>
     </div>
@@ -74,6 +76,11 @@ const filteredExamples = computed(() => {
 </template>
 
 <style lang="scss" scoped>
+.fade {
+  transition: all 0.4s ease-out;
+  opacity: 0;
+}
+
 .header {
   padding: 10px;
   display: grid;
@@ -99,10 +106,6 @@ const filteredExamples = computed(() => {
 }
 
 .card-container {
-
-  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-
   @media screen and (min-width: 550px) {
     display: grid;
     column-gap: 1rem;
@@ -162,8 +165,6 @@ const filteredExamples = computed(() => {
 
 }
 
-
-
 .tag {
   display: inline-block;
   margin-right: 5px;
@@ -176,18 +177,24 @@ const filteredExamples = computed(() => {
 
 .link-button {
   text-decoration: none;
-  background-color: #EEEEEE;
-  color: #333333;
-  padding: 2px 6px 2px 6px;
-  border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #CCCCCC;
-  display: inline-block;
+  color: #00adef;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: small;
 
   &:hover {
-    transition: .2s ease-in-out 0s;
-    transform: scale(1.25);
+    color: #1e4659;
+
+    &:before {
+      content: "> "
+    }
+
+    &:after {
+      content: " <"
+    }
+
   }
+
+
 }
 </style>
