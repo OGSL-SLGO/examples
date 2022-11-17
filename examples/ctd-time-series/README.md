@@ -7,7 +7,7 @@ Cet exemple utilise le jeu de données https://catalogue.ogsl.ca/dataset/ca-cioo
 
 ## Exécuter localement
 
-- Les outils nécessaires à l'exécutions de notebooks jupyter. (voir: https://code.visualstudio.com/ ou https://jupyter.org/)
+- Les outils nécessaires à l'exécutions de notebooks jupyter. (voir: https://code.visualstudio.com/ ou https://jupyter.org/){target:
 - installer les dépendences de **requirements.txt** 
 `pip install -r requirements.txt`
 
