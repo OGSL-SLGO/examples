@@ -1,7 +1,7 @@
 - title: Visualisation de données CTD (séries temporelles) - Partie 1
   description: Exploration et sélection de données dans un jeu de données
-  source_code_url: https://github.com/ogsl-slgo/examples/tree/first-example/examples/ctd-time-series
-  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/first-example?labpath=examples%2Fctd-time-series%2Fexemple_1.ipynb
+  source_code_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-time-series
+  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fctd-time-series%2Fpartie_1.ipynb
   card_image_url: examples/ctd-time-series/example_1.png
   tags:
     - océanographie
@@ -11,8 +11,8 @@
 
 - title: Visualisation de données CTD (séries temporelles) - Partie 2
   description: Affichage de données CTD sous forme de série temporelle
-  source_code_url: https://github.com/ogsl-slgo/examples/tree/first-example/examples/ctd-time-series
-  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/first-example?labpath=examples%2Fctd-time-series%2Fexemple_2.ipynb
+  source_code_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-time-series
+  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fctd-time-series%2Fpartie.ipynb
   card_image_url: examples/ctd-time-series/example_2.png
   tags:
     - océanographie
