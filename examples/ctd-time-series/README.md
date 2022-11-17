@@ -12,7 +12,7 @@ Cet exemple utilise le jeu de données https://catalogue.ogsl.ca/dataset/ca-cioo
 `pip install -r requirements.txt`
 
 
-## Exécuter en ligne
+## Exécuter en ligne avec **mybinder.org**
 
 Exécuter les notebooks avec binder:
 - Partie 1: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fctd-time-series%2Fpartie_1.ipynb)
