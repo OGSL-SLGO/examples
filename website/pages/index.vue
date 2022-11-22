@@ -43,15 +43,16 @@ const filteredExamples = computed(() => {
     }
   });
 })
+
 </script>
 
 <template>
   <div>
     <div class="header">
-      <div><img style="max-height: 30px;" src="~/assets/logo_ogsl.svg" /></div>
-      <div><input class="search-box" type="text" placeholder="Rechercher..." v-model="examplesSearchQuery" /></div>
-      <div style="text-align: center;font-size: 3em;">Gallerie
+      <div class="site-title">Gallerie
         d'exemples</div>
+      <div class="ogsl-logo"><img src="~/assets/logo_ogsl.svg" /></div>
+      <div class="search-box"><input type="text" placeholder="Rechercher..." v-model="examplesSearchQuery" /></div>
     </div>
     <div class="card-container">
       <div class="card" v-for="example in filteredExamples" :key="example.title">
@@ -76,36 +77,71 @@ const filteredExamples = computed(() => {
 </template>
 
 <style lang="scss" scoped>
-.fade {
-  transition: all 0.4s ease-out;
-  opacity: 0;
+.header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "logo title"
+    "search search";
+  row-gap: 5px;
+  align-items: center;
+
+  @media screen and (min-width: 550px) {
+    padding: 10px;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-areas:
+      "logo search title";
+  }
 }
 
-.header {
-  padding: 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  align-items: center;
+.site-title {
+  grid-area: title;
+  text-align: center;
+  font-size: 1.5em;
+
+  @media screen and (min-width: 550px) {
+    font-size: 3em;
+  }
+}
+
+.ogsl-logo {
+  grid-area: logo;
+
+  >img {
+    max-height: 20px;
+  }
+
+  @media screen and (min-width: 550px) {
+    >img {
+      max-height: 30px;
+    }
+  }
 }
 
 .search-box {
-  border: 3px solid #00adef;
-  padding: 5px;
-  box-sizing: border-box;
-  width: 100%;
-  border-radius: 15px;
-  outline: none;
-  color: #6d8379;
-  transition: all 200ms ease-out;
-  line-height: 20px;
-  font-size: 1em;
+  grid-area: search;
 
-  &:hover {
-    box-shadow: 0 0 6px rgb(35 173 255);
+  >input {
+    border: 3px solid #00adef;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 15px;
+    outline: none;
+    color: #6d8379;
+    transition: all 200ms ease-out;
+    line-height: 20px;
+    font-size: 1em;
+
+    &:hover {
+      box-shadow: 0 0 6px rgb(35 173 255);
+    }
   }
 }
 
 .card-container {
+  margin-top: 10px;
+
   @media screen and (min-width: 550px) {
     display: grid;
     column-gap: 1rem;
@@ -181,6 +217,12 @@ const filteredExamples = computed(() => {
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
   font-size: small;
+  display: inline-block;
+
+  &:not(:last-child):after {
+    content: ' \25CF'
+  }
+
 
   &:hover {
     color: #1e4659;
@@ -194,7 +236,5 @@ const filteredExamples = computed(() => {
     }
 
   }
-
-
 }
 </style>

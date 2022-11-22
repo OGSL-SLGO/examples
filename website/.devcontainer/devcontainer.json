@@ -26,7 +26,9 @@
 	"forwardPorts": [
 		3000,
 		4000,
-		24678
+		24678,
+		24679,
+		24680
 	],
 	"mounts": [
 		"source=github-exemples-website-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
