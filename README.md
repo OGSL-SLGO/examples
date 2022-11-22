@@ -1,6 +1,6 @@
-# Examples, tips, and tricks to learn on how to use publicly available datasets
+# Exemples, supports de formations, outils pédagogiques autour de l'utilisation de données ouvertes
 
-## Structure de ce repository
+## Structure de ce dépot
 
 - Le dossier **examples** contient le contenu pédagogique ouvert à tous. Notebooks, exemples, formations, etc..
 - Le dossier **website** content le code permetant de générer le site associé: https://ogsl-slgo.github.io/examples
