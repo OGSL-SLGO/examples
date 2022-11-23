@@ -68,8 +68,6 @@ const filteredExamples = computed(() => {
           <a target="_blank" :href="example.source_url" class="link-button" style="margin-right: 10px;">Aller vers
             le notebook</a>
           <a target="_blank" :href="example.binder_url" class="link-button">Lancer avec Binder</a>
-
-
         </div>
       </div>
     </div>
@@ -219,10 +217,17 @@ const filteredExamples = computed(() => {
   font-size: small;
   display: inline-block;
 
-  &:not(:last-child):after {
-    content: ' \25CF'
-  }
+  &:not(:last-child) {
+    $separator: '\00a0\00a0\25CF';
 
+    &:after {
+      content: $separator;
+    }
+
+    &:hover:after {
+      content: " <" + $separator;
+    }
+  }
 
   &:hover {
     color: #1e4659;
@@ -234,7 +239,6 @@ const filteredExamples = computed(() => {
     &:after {
       content: " <"
     }
-
   }
 }
 </style>
