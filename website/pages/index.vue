@@ -157,7 +157,6 @@ const filteredExamples = computed(() => {
   @media screen and (min-width: 550px) {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    height: 200px;
   }
 }
 
@@ -166,7 +165,6 @@ const filteredExamples = computed(() => {
     border-radius: 10px;
     width: 100%;
     height: 100px;
-    max-height: 200px;
     object-fit: cover;
   }
 
