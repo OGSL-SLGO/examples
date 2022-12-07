@@ -6,7 +6,7 @@
   card_image_url: examples/ctd-time-series/partie_1.png
   tags:
     - ctd
-    - profil
+    - série-temporelle
 
 - title: Visualisation de données CTD (séries temporelles) - Partie 2
   description: Affichage de données CTD sous forme de série temporelle
@@ -26,7 +26,7 @@
   card_image_url: examples/ctd-profile/partie_1.png
   tags:
     - ctd
-    - série-temporelle
+    - profil
 
 - title: Visualisation de données CTD (profil) - Partie 2
   description: Affichage de données CTD sous forme de profil
@@ -36,4 +36,4 @@
   card_image_url: examples/ctd-profile/partie_2.png
   tags:
     - ctd
-    - série-temporelle
+    - profil
