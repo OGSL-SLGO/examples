@@ -20,8 +20,8 @@
 
 - title: Visualisation de données CTD (profil) - Partie 1
   description: Exploration et sélection de données dans un jeu de données
-  context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-time-series/
-  source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-time-series/partie_1.ipynb
+  context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-profile/
+  source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-profile/partie_1.ipynb
   binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fctd-profile%2Fpartie_1.ipynb
   card_image_url: examples/ctd-profile/partie_1.png
   tags:
