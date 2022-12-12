@@ -1,9 +1,6 @@
-# Exemple d'utilisation d'un jeu de données CTD sous forme de séries temporelles
+# Exemples d'utilisation de la librairie pyOBIS pour la validation de jeux de données Darwin Core
 
-Cet exemple utilise le jeu de données https://doi.org/10.26071/ogsl-f1521dd5-d3a6
 
-- Le premier notebook [partie_1.ipynb](partie_1.ipynb) montre une manière d'explorer le jeu de données pour déterminer comment l'exploiter.
-- Le second notebook [partie_2.ipynb](partie_2.ipynb) montre comment afficher un profil.
 
 ## Exécuter localement
 
