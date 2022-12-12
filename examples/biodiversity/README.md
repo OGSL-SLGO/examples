@@ -1,7 +1,15 @@
 # Exemples d'utilisation de la librairie pyOBIS pour la validation de jeux de données Darwin Core
 
-
-
+Cette séries d'exemple est composée des notebooks suivants:
+* check_eventids.ipynb
+  > Fonctions liées à la validation des event ids
+* check_fields.ipynb 
+  > Fonctions liées à la validation de la présence des champs obligatoires
+* check_fields.ipynb 
+  > Fonctions liées à la validation de la présence des champs obligatoires
+* check_scientificname_and_ids.ipynb
+  > Fonctions liées à la validation de termes et identifiants scientifiques 
+  
 ## Exécuter localement
 
 - Les outils nécessaires à l'exécutions de notebooks jupyter. (voir: https://code.visualstudio.com/ ou https://jupyter.org/)
