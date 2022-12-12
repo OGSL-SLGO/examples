@@ -1,0 +1,14 @@
+name: pyobistools
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+- plotly
+- pandas
+- numpy
+- nbformat
+- pip
+- pip:
+  - git+https://github.com/cioos-siooc/pyobistools@main#egg=pyobistools
+  - kaleido
+  - nest_asyncio
