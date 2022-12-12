@@ -12,8 +12,8 @@ Cette séries d'exemple est composée des notebooks suivants:
 
 * Les outils nécessaires à l'exécutions de notebooks jupyter. (voir: https://code.visualstudio.com/ ou https://jupyter.org/)
 * Installer les dépendences de **environment.yml** 
-> Installer Anaconda: `https://www.anaconda.com/products/distribution`
-> Créer un environnement virtuel avec Conda: `conda env create -f environment.yml`
+  > Installer Anaconda: `https://www.anaconda.com/products/distribution`
+  > Créer un environnement virtuel avec Conda: `conda env create -f environment.yml`
 
 ## Exécuter en ligne avec **mybinder.org**
 
