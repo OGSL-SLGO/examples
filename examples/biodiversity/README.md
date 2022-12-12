@@ -11,12 +11,9 @@ Cette séries d'exemple est composée des notebooks suivants:
 ## Exécuter localement
 
 * Les outils nécessaires à l'exécutions de notebooks jupyter. (voir: https://code.visualstudio.com/ ou https://jupyter.org/)
-* Installer les dépendences de **requirements.txt** 
-> `pip install -r requirements.txt`
-* Installer le module Pyobis en version pré-release sur Pypi (testé sur environnement Python 3.7.11): `pip install git+https://github.com/cioos-siooc/pyobistools@main#egg=pyobistools`
-Si façon simple ne fonctionne pas, 
+* Installer les dépendences de **environment.yml** 
 > Installer Anaconda: `https://www.anaconda.com/products/distribution`
-> Installer Pyobis en créant un environnement virtuel anaconda: `conda env create -f environment.yml`
+> Créer un environnement virtuel avec Conda: `conda env create -f environment.yml`
 
 ## Exécuter en ligne avec **mybinder.org**
 
