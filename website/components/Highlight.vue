@@ -5,9 +5,9 @@ const props = defineProps({
 })
 
 function highlightContent() {
-    if (!this.props.query) return this.props.content;
+    if (!props.query) return props.content;
 
-    return this.props.content.replace(new RegExp(this.props.query, "gi"), match => {
+    return props.content.replace(new RegExp(props.query, "gi"), match => {
         return '<span class="highlighted-text">' + match + '</span>';
     });
 }
