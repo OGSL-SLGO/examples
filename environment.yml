@@ -3,13 +3,16 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+- geopandas
+- pyworms
 - plotly
 - pandas
 - numpy
 - nbformat
-- ipykernel
 - pip
 - pip:
   - git+https://github.com/cioos-siooc/pyobistools@main#egg=pyobistools
   - kaleido
   - nest_asyncio
+  - ipykernel
+
