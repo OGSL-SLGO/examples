@@ -2,13 +2,11 @@
 
 Cette séries d'exemple est composée des notebooks suivants:
 * [check_eventids.ipynb](check_eventids.ipynb)
-  > Fonctions liées à la validation des event ids
+  > Validation des event ids
 * [check_fields.ipynb](check_fields.ipynb)
-  > Fonctions liées à la validation de la présence des champs obligatoires
-* [check_fields.ipynb](check_fields.ipynb) 
-  > Fonctions liées à la validation de la présence des champs obligatoires
+  >Validation de la présence des champs obligatoires
 * [check_scientificname_and_ids.ipynb](check_scientificname_and_ids.ipynb)
-  > Fonctions liées à la validation de termes et identifiants scientifiques 
+  > Validation de termes et identifiants scientifiques 
   
 ## Exécuter localement
 
