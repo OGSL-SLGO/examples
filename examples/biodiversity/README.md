@@ -1,10 +1,13 @@
-# Exemple d'utilisation d'un jeu de données CTD sous forme de séries temporelles
+# Exemples d'utilisation de la librairie pyOBIS pour la validation de jeux de données Darwin Core
 
-Cet exemple utilise le jeu de données https://doi.org/10.26071/ogsl-f1521dd5-d3a6
-
-- Le premier notebook [partie_1.ipynb](partie_1.ipynb) montre une manière d'explorer le jeu de données pour déterminer comment l'exploiter.
-- Le second notebook [partie_2.ipynb](partie_2.ipynb) montre comment afficher un profil.
-
+Cette séries d'exemple est composée des notebooks suivants:
+* [check_eventids.ipynb](check_eventids.ipynb)
+  > Validation des event ids
+* [check_fields.ipynb](check_fields.ipynb)
+  >Validation de la présence des champs obligatoires
+* [check_scientificname_and_ids.ipynb](check_scientificname_and_ids.ipynb)
+  > Validation de termes et identifiants scientifiques 
+  
 ## Exécuter localement
 
 - Les outils nécessaires à l'exécutions de notebooks jupyter. (voir: https://code.visualstudio.com/ ou https://jupyter.org/)
@@ -14,7 +17,8 @@ Cet exemple utilise le jeu de données https://doi.org/10.26071/ogsl-f1521dd5-d3
 
 ## Exécuter en ligne avec **mybinder.org**
 
-- Partie 1: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fctd-profile%2Fpartie_1.ipynb)
-- Partie 2: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fctd-profile%2Fpartie_2.ipynb)
+- check_eventids.ipynb: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2Fcheck_eventids.ipynb)
+- check_fields.ipynb: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2F2Fbiodiversity%2Fcheck_fields.ipynb)
+- check_scientificname_and_ids.ipynb: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiersity%2Fcheck_scientificname_and_ids.ipynb)
 
   
