@@ -17,6 +17,6 @@ Cette séries d'exemple est composée des notebooks suivants:
 
 ## Exécuter en ligne avec **mybinder.org**
 
-- check_eventids.ipynb: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2Fcheck_eventids.ipynb)
-- check_fields.ipynb: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2F2Fbiodiversity%2Fcheck_fields.ipynb)
-- check_scientificname_and_ids.ipynb: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiersity%2Fcheck_scientificname_and_ids.ipynb)
+- Demonstration_PyObis_fonction_check_eventids.ipynb: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDemonstration_PyObis_fonction_check_eventids.ipynb)
+- Demonstration_PyObis_fonction_check_fields.ipynb: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2F2Fbiodiversity%2FDemonstration_PyObis_fonction_check_fields.ipynb)
+- Demonstration_PyObis_fonction_fonction_check_scientificname_and_ids.ipynb: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiersity%2FDemonstration_PyObis_fonction_fonction_check_scientificname_and_ids.ipynb)
