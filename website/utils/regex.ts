@@ -1,4 +1,4 @@
-export function addAccents(input: string) {
+function addAccents(input: string) {
     let retval = input;
     retval = retval.replace(/([ao])e/ig, "$1");
     retval = retval.replace(/e/ig, "[eèéêë]");
@@ -10,4 +10,12 @@ export function addAccents(input: string) {
     retval = retval.replace(/a/ig, "([aàâä]|ae)");
     retval = retval.replace(/o/ig, "([oôö]|oe)");
     return retval;
-} 
+}
+
+function escapeRegExp(text: string) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+}
+
+export function createTextSearchRegex(text: string) {
+    return new RegExp(addAccents(escapeRegExp(text)), "gi");
+}

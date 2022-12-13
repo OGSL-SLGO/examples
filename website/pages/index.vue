@@ -1,5 +1,5 @@
 <script setup>
-import { addAccents } from "@/utils/regex"
+import { createTextSearchRegex } from "@/utils/regex"
 
 const runtimeConfig = useRuntimeConfig();
 
@@ -23,7 +23,7 @@ const filteredExamples = computed(() => {
     default:
       filter_ = function (example) {
         for (const text of [example.title, example.description, ...example.tags]) {
-          if (text.match(new RegExp(addAccents(examplesSearchQuery.value), "gi"))) return true
+          if (text.match(createTextSearchRegex(examplesSearchQuery.value))) return true
         }
       }
   }

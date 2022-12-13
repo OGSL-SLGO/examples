@@ -1,5 +1,5 @@
 <script setup>
-import { addAccents } from "@/utils/regex"
+import { createTextSearchRegex } from "@/utils/regex"
 
 const props = defineProps({
     content: String,
@@ -9,7 +9,7 @@ const props = defineProps({
 function highlightContent() {
     if (!props.query) return props.content;
 
-    return props.content.replace(new RegExp(addAccents(props.query), "gi"), match => {
+    return props.content.replace(createTextSearchRegex(props.query), match => {
         return '<span class="highlighted-text">' + match + '</span>';
     });
 }
