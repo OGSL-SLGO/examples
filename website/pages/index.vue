@@ -1,59 +1,36 @@
 <script setup>
+import { addAccents } from "@/utils/regex"
+
 const runtimeConfig = useRuntimeConfig();
 
 const queryResult = await queryContent().where({ _file: "examples.yml" }).only(['body']).find()
 const allExamples = queryResult[0].body
-
-function normalizeString(text) {
-  return text.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-}
-
-function createWordsList(text, minLength = 3) {
-  const wordsList = []
-  const regexIterator = normalizeString(text).matchAll(/[-'’\p{L}\p{M}\p{N}]+/giu);
-  for (const match of regexIterator) {
-    const word = match[0]
-    if (word.length < minLength) continue;
-    wordsList.push(word)
-  }
-  return wordsList
-}
-
-for (const example of allExamples) {
-  let wordsList = []
-
-  for (const tag of example.tags) {
-    wordsList = wordsList.concat(createWordsList(tag, 1))
-  }
-  wordsList = wordsList.concat(createWordsList(example.title))
-  wordsList = wordsList.concat(createWordsList(example.description))
-  example['words'] = [...new Set(wordsList)];
-}
 
 const examplesSearchQuery = ref('')
 
 const filteredExamples = computed(() => {
   if (examplesSearchQuery.value == "") return allExamples;
 
-  let filter = null
-  if (examplesSearchQuery.value.startsWith("#")) {
-    return allExamples.filter(example => {
-      for (const tag of example.tags) {
-        if (tag.includes(examplesSearchQuery.value.substring(1))) return true
+  let filter_ = null;
+  switch (true) {
+    case examplesSearchQuery.value.startsWith("#"):
+      filter_ = function (example) {
+        for (const tag of example.tags) {
+          if (tag.includes(examplesSearchQuery.value.substring(1))) return true
+        }
       }
-    });
+      break;
+    default:
+      filter_ = function (example) {
+        for (const text of [example.title, example.description, ...example.tags]) {
+          if (text.match(new RegExp(addAccents(examplesSearchQuery.value), "gi"))) return true
+        }
+      }
   }
+  return allExamples.filter(filter_)
 
-  return allExamples.filter(example => {
-    for (const word of example.words) {
-      if (word.includes(normalizeString(examplesSearchQuery.value))) return true
-    }
-  });
 })
 
-function handleTagClick(tag) {
-  examplesSearchQuery.value = '#' + tag
-}
 </script>
 
 <template>
@@ -69,14 +46,14 @@ function handleTagClick(tag) {
         <div class="card-image"><img :src="runtimeConfig.app.baseURL + example.card_image_url" /></div>
         <div class="card-description">
           <h1>
-            <Highlight :content="example.title" :query="examplesSearchQuery" />
+            <Highlighted :content="example.title" :query="examplesSearchQuery" />
           </h1>
           <p style="margin-bottom: 10px">
-            <Highlight :content="example.description" :query="examplesSearchQuery" />
+            <Highlighted :content="example.description" :query="examplesSearchQuery" />
           </p>
-          <div style="margin-bottom: 10px;"><span class="tag" v-for="tag in example.tags" :key="tag">
-              <Highlight @click="handleTagClick(tag)" :content="'#' + tag" :query="examplesSearchQuery" />
-            </span>
+          <div style="margin-bottom: 10px;">
+            <Highlighted class="tag" v-for="tag in example.tags" :key="tag" @click="examplesSearchQuery = '#' + tag"
+              :content="'#' + tag" :query="examplesSearchQuery" />
           </div>
           <a target="_blank" :href="example.context_url" class="link-button" style="margin-right: 10px;">Contexte</a>
           <a target="_blank" :href="example.source_url" class="link-button" style="margin-right: 10px;">Aller vers
