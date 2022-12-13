@@ -1,6 +1,4 @@
 <script setup>
-import { ref } from 'vue'
-
 const runtimeConfig = useRuntimeConfig();
 
 const queryResult = await queryContent().where({ _file: "examples.yml" }).only(['body']).find()
@@ -37,6 +35,15 @@ const examplesSearchQuery = ref('')
 const filteredExamples = computed(() => {
   if (examplesSearchQuery.value == "") return allExamples;
 
+  let filter = null
+  if (examplesSearchQuery.value.startsWith("#")) {
+    return allExamples.filter(example => {
+      for (const tag of example.tags) {
+        if (tag.includes(examplesSearchQuery.value.substring(1))) return true
+      }
+    });
+  }
+
   return allExamples.filter(example => {
     for (const word of example.words) {
       if (word.includes(normalizeString(examplesSearchQuery.value))) return true
@@ -44,6 +51,9 @@ const filteredExamples = computed(() => {
   });
 })
 
+function handleTagClick(tag) {
+  examplesSearchQuery.value = '#' + tag
+}
 </script>
 
 <template>
@@ -58,11 +68,15 @@ const filteredExamples = computed(() => {
       <div class="card" v-for="example in filteredExamples" :key="example.title">
         <div class="card-image"><img :src="runtimeConfig.app.baseURL + example.card_image_url" /></div>
         <div class="card-description">
-          <h1>{{ example.title }}</h1>
+          <h1>
+            <Highlight :content="example.title" :query="examplesSearchQuery" />
+          </h1>
           <p style="margin-bottom: 10px">
-            {{ example.description }}
+            <Highlight :content="example.description" :query="examplesSearchQuery" />
           </p>
-          <div style="margin-bottom: 10px;"><span class="tag" v-for="tag in example.tags" :key="tag">{{ tag }}</span>
+          <div style="margin-bottom: 10px;"><span class="tag" v-for="tag in example.tags" :key="tag">
+              <Highlight @click="handleTagClick(tag)" :content="'#' + tag" :query="examplesSearchQuery" />
+            </span>
           </div>
           <a target="_blank" :href="example.context_url" class="link-button" style="margin-right: 10px;">Contexte</a>
           <a target="_blank" :href="example.source_url" class="link-button" style="margin-right: 10px;">Aller vers
@@ -201,9 +215,10 @@ const filteredExamples = computed(() => {
   display: inline-block;
   margin-right: 5px;
   font-style: italic;
+  cursor: pointer;
 
-  &:before {
-    content: '#'
+  &:hover {
+    font-weight: bold;
   }
 }
 
