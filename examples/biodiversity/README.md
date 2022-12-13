@@ -5,7 +5,7 @@ Cette séries d'exemple est composée des notebooks suivants:
   > Validation des event ids
 * [Demonstration_PyObis_fonction_check_fields.ipynb](Demonstration_PyObis_fonction_check_fields.ipynb)
   >Validation de la présence des champs obligatoires
-* [Demonstration_PyObis_fonction_fonction check_scientificname_and_ids.ipynb](Demonstration_PyObis_fonction_fonction check_scientificname_and_ids.ipynb)
+* [Demonstration_PyObis_fonction_fonction_check_scientificname_and_ids.ipynb](Demonstration_PyObis_fonction_fonction_check_scientificname_and_ids.ipynb)
   > Validation de termes et identifiants scientifiques 
   
 ## Exécuter localement
