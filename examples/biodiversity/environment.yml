@@ -1,0 +1,16 @@
+name: pyobistools
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+- geopandas
+- pyworms
+- plotly
+- pandas
+- numpy
+- pip
+- pip:
+  - git+https://github.com/cioos-siooc/pyobistools@main#egg=pyobistools
+  - nest_asyncio
+  - ipykernel
+
