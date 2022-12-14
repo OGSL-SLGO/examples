@@ -1,4 +1,4 @@
-name: pyobistools
+name: notebooks
 channels:
   - conda-forge
   - defaults
