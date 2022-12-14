@@ -43,7 +43,7 @@ const filteredExamples = computed(() => {
     </div>
     <div class="card-container">
       <div class="card" v-for="example in filteredExamples" :key="example.title">
-        <div class="card-image"><nuxt-img width="500px" :src="example.card_image_url" />
+        <div class="card-image"><img :src="example.card_image_url" />
         </div>
         <div class="card-description">
           <h1>
