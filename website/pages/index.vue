@@ -43,7 +43,8 @@ const filteredExamples = computed(() => {
     </div>
     <div class="card-container">
       <div class="card" v-for="example in filteredExamples" :key="example.title">
-        <div class="card-image"><img :src="runtimeConfig.app.baseURL + example.card_image_url" /></div>
+        <div class="card-image"><nuxt-img width="500px" :src="runtimeConfig.app.baseURL + example.card_image_url" />
+        </div>
         <div class="card-description">
           <h1>
             <Highlighted :content="example.title" :query="examplesSearchQuery" />
