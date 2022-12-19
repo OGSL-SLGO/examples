@@ -1,8 +1,6 @@
 <script setup>
 import { createTextSearchRegex } from "@/utils/regex"
 
-const runtimeConfig = useRuntimeConfig();
-
 const queryResult = await queryContent().where({ _file: "examples.yml" }).only(['body']).find()
 const allExamples = queryResult[0].body
 
@@ -31,15 +29,22 @@ const filteredExamples = computed(() => {
 
 })
 
+const searchBox = ref(null)
+
+function handleTagClick(tag) {
+  examplesSearchQuery.value = '#' + tag
+  searchBox.value.focus()
+}
+
 </script>
 
 <template>
   <div>
     <div class="header">
-      <div class="site-title">Gallerie
-        d'exemples</div>
+      <div class="site-title">Gallerie d'exemples</div>
       <div class="ogsl-logo"><img src="~/assets/logo_ogsl.svg" /></div>
-      <div class="search-box"><input type="text" placeholder="Rechercher..." v-model="examplesSearchQuery" /></div>
+      <div class="search-box"><input ref="searchBox" type="search" placeholder="Rechercher..."
+          v-model="examplesSearchQuery" /></div>
     </div>
     <div class="card-container">
       <div class="card" v-for="example in filteredExamples" :key="example.title">
@@ -53,7 +58,7 @@ const filteredExamples = computed(() => {
             <Highlighted :content="example.description" :query="examplesSearchQuery" />
           </p>
           <div style="margin-bottom: 10px;">
-            <Highlighted class="tag" v-for="tag in example.tags" :key="tag" @click="examplesSearchQuery = '#' + tag"
+            <Highlighted class="tag" v-for="tag in example.tags" :key="tag" @click="handleTagClick(tag)"
               :content="'#' + tag" :query="examplesSearchQuery" />
           </div>
           <a target="_blank" :href="example.context_url" class="link-button" style="margin-right: 10px;">Contexte</a>
@@ -113,7 +118,7 @@ const filteredExamples = computed(() => {
 
   >input {
     border: 3px solid #00adef;
-    padding: 5px;
+    padding: 5px 10px;
     box-sizing: border-box;
     width: 100%;
     border-radius: 15px;
