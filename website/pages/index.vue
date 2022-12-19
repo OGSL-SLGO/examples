@@ -28,14 +28,6 @@ const filteredExamples = computed(() => {
   return allExamples.filter(filter_)
 
 })
-
-const searchBox = ref(null)
-
-function handleTagClick(tag) {
-  examplesSearchQuery.value = '#' + tag
-  searchBox.value.focus()
-}
-
 </script>
 
 <template>
@@ -43,8 +35,9 @@ function handleTagClick(tag) {
     <div class="header">
       <div class="site-title">Gallerie d'exemples</div>
       <div class="ogsl-logo"><img src="~/assets/logo_ogsl.svg" /></div>
-      <div class="search-box"><input ref="searchBox" type="search" placeholder="Rechercher..."
-          v-model="examplesSearchQuery" /></div>
+      <div class="search-box">
+        <SearchBox v-model="examplesSearchQuery" />
+      </div>
     </div>
     <div class="card-container">
       <div class="card" v-for="example in filteredExamples" :key="example.title">
@@ -58,7 +51,7 @@ function handleTagClick(tag) {
             <Highlighted :content="example.description" :query="examplesSearchQuery" />
           </p>
           <div style="margin-bottom: 10px;">
-            <Highlighted class="tag" v-for="tag in example.tags" :key="tag" @click="handleTagClick(tag)"
+            <Highlighted class="tag" v-for="tag in example.tags" :key="tag" @click="examplesSearchQuery = '#' + tag"
               :content="'#' + tag" :query="examplesSearchQuery" />
           </div>
           <a target="_blank" :href="example.context_url" class="link-button" style="margin-right: 10px;">Contexte</a>
@@ -115,23 +108,6 @@ function handleTagClick(tag) {
 
 .search-box {
   grid-area: search;
-
-  >input {
-    border: 3px solid #00adef;
-    padding: 5px 10px;
-    box-sizing: border-box;
-    width: 100%;
-    border-radius: 15px;
-    outline: none;
-    color: #6d8379;
-    transition: all 200ms ease-out;
-    line-height: 20px;
-    font-size: 1em;
-
-    &:hover {
-      box-shadow: 0 0 6px rgb(35 173 255);
-    }
-  }
 }
 
 .card-container {
