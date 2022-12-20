@@ -15,4 +15,5 @@ dependencies:
   - kaleido
   - nest_asyncio
   - ipykernel
+  - httpx
 
