@@ -1,6 +1,14 @@
 <script setup>
 import { createTextSearchRegex } from "@/utils/regex"
 
+useHead({
+  title: "Gallerie d'exemples",
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+  charset: 'utf-8',
+  meta: [{ name: 'description', content: "Exemples, supports de formations, outils pédagogiques autour de l'utilisation de données ouverte" }],
+  link: [{ rel: 'icon', type: 'image/png', href: 'O_favicon.ico' }],
+})
+
 const queryResult = await queryContent().where({ _file: "examples.yml" }).only(['body']).find()
 const allExamples = queryResult[0].body
 
