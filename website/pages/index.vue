@@ -114,10 +114,10 @@ const filteredExamples = computed(() => {
   margin-top: 10px;
 
   @media screen and (min-width: 550px) {
-    display: grid;
-    column-gap: 1rem;
     padding: 1px;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    column-gap: 1rem;
   }
 }
 
@@ -130,6 +130,7 @@ const filteredExamples = computed(() => {
   @media screen and (min-width: 550px) {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    max-width: 1000px;
   }
 }
 
