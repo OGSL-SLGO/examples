@@ -27,9 +27,10 @@ const filteredExamples = computed(() => {
       }
       break;
     default:
+      const regex = createTextSearchRegex(examplesSearchQuery.value)
       filter_ = function (example) {
         for (const text of [example.title, example.description, ...example.tags]) {
-          if (text.match(createTextSearchRegex(examplesSearchQuery.value))) return true
+          if (text.match(regex)) return true
         }
       }
   }
