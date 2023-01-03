@@ -3,13 +3,13 @@ import { createTextSearchRegex } from "@/utils/regex"
 
 const props = defineProps({
     content: String,
-    query: String
+    highlightRegex: RegExp
 })
 
 function highlightContent() {
-    if (!props.query) return props.content;
+    if (!props.highlightRegex) return props.content;
 
-    return props.content.replace(createTextSearchRegex(props.query), match => {
+    return props.content.replace(props.highlightRegex, match => {
         return '<span class="highlighted-text">' + match + '</span>';
     });
 }

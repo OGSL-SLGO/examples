@@ -15,7 +15,7 @@ const allExamples = queryResult[0].body
 const examplesSearchQuery = ref('')
 
 const filteredExamples = computed(() => {
-  if (examplesSearchQuery.value == "") return allExamples;
+  if (examplesSearchQuery.value === "") return allExamples;
 
   let filter_ = null;
   switch (true) {
@@ -27,15 +27,20 @@ const filteredExamples = computed(() => {
       }
       break;
     default:
-      const regex = createTextSearchRegex(examplesSearchQuery.value)
       filter_ = function (example) {
         for (const text of [example.title, example.description, ...example.tags]) {
-          if (text.match(regex)) return true
+          if (text.match(searchRegex.value)) return true
         }
       }
   }
   return allExamples.filter(filter_)
 
+})
+
+const searchRegex = computed(() => {
+  if (examplesSearchQuery.value === "") return null;
+
+  return createTextSearchRegex(examplesSearchQuery.value);
 })
 </script>
 
@@ -54,14 +59,14 @@ const filteredExamples = computed(() => {
         </div>
         <div class="card-description">
           <h1>
-            <Highlighted :content="example.title" :query="examplesSearchQuery" />
+            <Highlighted :content="example.title" :highlightRegex="searchRegex" />
           </h1>
           <p style="margin-bottom: 10px">
-            <Highlighted :content="example.description" :query="examplesSearchQuery" />
+            <Highlighted :content="example.description" :highlightRegex="searchRegex" />
           </p>
           <div style="margin-bottom: 10px;">
             <Highlighted class="tag" v-for="tag in example.tags" :key="tag" @click="examplesSearchQuery = '#' + tag"
-              :content="'#' + tag" :query="examplesSearchQuery" />
+              :content="'#' + tag" :highlightRegex="searchRegex" />
           </div>
           <a target="_blank" :href="example.context_url" class="link-button" style="margin-right: 10px;">Contexte</a>
           <a target="_blank" :href="example.source_url" class="link-button" style="margin-right: 10px;">Aller vers
