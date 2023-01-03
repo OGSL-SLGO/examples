@@ -1,8 +1,3 @@
-<script setup>
-const props = defineProps(['modelValue'])
-defineEmits(['update:modelValue'])
-</script>
-
 <template>
     <div>
         <input type="text" placeholder="Rechercher..." :value="modelValue"
@@ -10,6 +5,12 @@ defineEmits(['update:modelValue'])
         <button v-show="modelValue" @click="$emit('update:modelValue', '')">X</button>
     </div>
 </template>
+
+
+<script setup>
+const props = defineProps(['modelValue'])
+defineEmits(['update:modelValue'])
+</script>
 
 <style lang="scss" scoped>
 input {

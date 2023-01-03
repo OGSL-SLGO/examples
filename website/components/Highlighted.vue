@@ -1,6 +1,8 @@
-<script setup>
-import { createTextSearchRegex } from "@/utils/regex"
+<template>
+    <span v-html="highlightContent()"></span>
+</template>
 
+<script setup>
 const props = defineProps({
     content: String,
     highlightRegex: RegExp
@@ -14,10 +16,6 @@ function highlightContent() {
     });
 }
 </script>
-
-<template>
-    <span v-html="highlightContent()"></span>
-</template>
 
 <style scoped>
 :deep(.highlighted-text) {

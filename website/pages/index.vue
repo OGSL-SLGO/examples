@@ -1,3 +1,37 @@
+<template>
+  <div>
+    <div class="header">
+      <div class="site-title">Gallerie d'exemples</div>
+      <div class="ogsl-logo"><img src="~/assets/logo_ogsl.svg" /></div>
+      <div class="search-box">
+        <SearchBox v-model="examplesSearchQuery" />
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card" v-for="example in filteredExamples" :key="example.title">
+        <div class="card-image"><img :src="example.card_image_url" />
+        </div>
+        <div class="card-description">
+          <h1>
+            <Highlighted :content="example.title" :highlightRegex="searchRegex" />
+          </h1>
+          <p style="margin-bottom: 10px">
+            <Highlighted :content="example.description" :highlightRegex="searchRegex" />
+          </p>
+          <div style="margin-bottom: 10px;">
+            <Highlighted class="tag" v-for="tag in example.tags" :key="tag" @click="examplesSearchQuery = '#' + tag"
+              :content="'#' + tag" :highlightRegex="searchRegex" />
+          </div>
+          <a target="_blank" :href="example.context_url" class="link-button" style="margin-right: 10px;">Contexte</a>
+          <a target="_blank" :href="example.source_url" class="link-button" style="margin-right: 10px;">Aller vers
+            le notebook</a>
+          <a target="_blank" :href="example.binder_url" class="link-button">Lancer avec Binder</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <script setup>
 import { createTextSearchRegex } from "@/utils/regex"
 
@@ -43,40 +77,6 @@ const searchRegex = computed(() => {
   return createTextSearchRegex(examplesSearchQuery.value);
 })
 </script>
-
-<template>
-  <div>
-    <div class="header">
-      <div class="site-title">Gallerie d'exemples</div>
-      <div class="ogsl-logo"><img src="~/assets/logo_ogsl.svg" /></div>
-      <div class="search-box">
-        <SearchBox v-model="examplesSearchQuery" />
-      </div>
-    </div>
-    <div class="card-container">
-      <div class="card" v-for="example in filteredExamples" :key="example.title">
-        <div class="card-image"><img :src="example.card_image_url" />
-        </div>
-        <div class="card-description">
-          <h1>
-            <Highlighted :content="example.title" :highlightRegex="searchRegex" />
-          </h1>
-          <p style="margin-bottom: 10px">
-            <Highlighted :content="example.description" :highlightRegex="searchRegex" />
-          </p>
-          <div style="margin-bottom: 10px;">
-            <Highlighted class="tag" v-for="tag in example.tags" :key="tag" @click="examplesSearchQuery = '#' + tag"
-              :content="'#' + tag" :highlightRegex="searchRegex" />
-          </div>
-          <a target="_blank" :href="example.context_url" class="link-button" style="margin-right: 10px;">Contexte</a>
-          <a target="_blank" :href="example.source_url" class="link-button" style="margin-right: 10px;">Aller vers
-            le notebook</a>
-          <a target="_blank" :href="example.binder_url" class="link-button">Lancer avec Binder</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
 
 <style lang="scss" scoped>
 .header {
