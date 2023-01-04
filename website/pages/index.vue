@@ -80,6 +80,10 @@ const searchRegex = computed(() => {
 
 <style lang="scss" scoped>
 .header {
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  padding: 10px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-areas:
@@ -89,7 +93,6 @@ const searchRegex = computed(() => {
   align-items: center;
 
   @media screen and (min-width: 550px) {
-    padding: 10px;
     grid-template-columns: 1fr 1fr 2fr;
     grid-template-areas:
       "logo search title";
