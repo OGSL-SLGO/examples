@@ -13,14 +13,14 @@
         </div>
         <div class="card-description">
           <h1>
-            <Highlighted :content="example.title" :highlightRegex="searchRegex" />
+            <HighlightableText :content="example.title" :highlightRegex="searchRegex" />
           </h1>
           <p style="margin-bottom: 10px">
-            <Highlighted :content="example.description" :highlightRegex="searchRegex" />
+            <HighlightableText :content="example.description" :highlightRegex="searchRegex" />
           </p>
           <div style="margin-bottom: 10px;">
-            <Highlighted class="tag" v-for="tag in example.tags" :key="tag" @click="examplesSearchQuery = '#' + tag"
-              :content="'#' + tag" :highlightRegex="searchRegex" />
+            <HighlightableText class="tag" v-for="tag in example.tags" :key="tag"
+              @click="examplesSearchQuery = '#' + tag" :content="'#' + tag" :highlightRegex="searchRegex" />
           </div>
           <a target="_blank" :href="example.context_url" class="link-button" style="margin-right: 10px;">Contexte</a>
           <a target="_blank" :href="example.source_url" class="link-button" style="margin-right: 10px;">Aller vers

@@ -6,9 +6,8 @@
     </div>
 </template>
 
-
 <script setup>
-const props = defineProps(['modelValue'])
+defineProps(['modelValue'])
 defineEmits(['update:modelValue'])
 </script>
 
