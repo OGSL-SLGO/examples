@@ -88,7 +88,6 @@
   binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDwC_file_merge.ipynb
   card_image_url: examples/biodiversity/dwc-merge-size.png
   tags:
-    - pyobis
     - biodiversité
     - R
     - darwin core (DwC)
