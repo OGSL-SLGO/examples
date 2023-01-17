@@ -1,11 +1,12 @@
 # Exemples de manipulations d'archives darwin core (DwC)
 
-## Utilisation d'une archive DarwinCore à des fins d'analyse
+## Utilisation d'une archive DwC à des fins d'analyse
 
 Le notebook [DwC_file_merge.ipynb](DwC_file_merge.ipynb)
 présente comment procéder à l'aggrégation des fichiers DarwinCore en un seul fichier afin de permettre la réalisation d'analyses et\ou de visualisation.
+> Ce notebook est codé en R
 
-## Validation d'archives DwC avec la librairie PyObis
+## Validation d'archives DwC avec la librairie PyObis (librairie Python)
 
 Cette séries d'exemple est composée des notebooks suivants:
 
