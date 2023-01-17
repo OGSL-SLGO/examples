@@ -1,3 +1,50 @@
+- title: DwC - Aggrégation de fichiers
+  description: Aggrégations de fichiers Darwin Core pour analyse et/ou visualisation
+  context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/
+  source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/DwC_file_merge.ipynb
+  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDwC_file_merge.ipynb
+  card_image_url: examples/biodiversity/dwc-merge-size.png
+  tags:
+    - biodiversité
+    - R
+    - darwin core (DwC)
+
+- title: PyObis - check event ids
+  description: Validation la cohérence des events ids dans les archives Darwin Core
+  context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/
+  source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/Demonstration_PyObis_fonction_check_eventids.ipynb
+  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDemonstration_PyObis_fonction_check_eventids.ipynb
+  card_image_url: examples/biodiversity/quality-control-resized.jpg
+  tags:
+    - pyobis
+    - biodiversité
+    - python
+    - darwin core (DwC)
+
+- title: PyObis - check fields
+  description: Validation des données obligatoires dans les archives Darwin Core
+  context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/
+  source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/Demonstration_PyObis_fonction_check_fields.ipynb
+  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDemonstration_PyObis_fonction_check_fields.ipynb
+  card_image_url: examples/biodiversity/quality-control-resized.jpg
+  tags:
+    - pyobis
+    - biodiversité
+    - python
+    - darwin core (DwC)
+
+- title: PyObis - check scientific names
+  description: Validation des termes et identifiants scientifiques utilisés dans les archives Darwin Core
+  context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/
+  source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/Demonstration_PyObis_fonction_fonction_check_scientificname_and_ids.ipynb
+  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDemonstration_PyObis_fonction_fonction_check_scientificname_and_ids.ipynb
+  card_image_url: examples/biodiversity/corail-resized.jpg
+  tags:
+    - pyobis
+    - biodiversité
+    - python
+    - darwin core (DwC)
+
 - title: Visualisation de données CTD (séries temporelles) - Partie 1
   description: Exploration et sélection de données dans un jeu de données
   context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-time-series/
@@ -45,49 +92,3 @@
     - profil
     - océanographie
 
-- title: PyObis - check event ids
-  description: Validation la cohérence des events ids dans les archives Darwin Core
-  context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/
-  source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/Demonstration_PyObis_fonction_check_eventids.ipynb
-  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDemonstration_PyObis_fonction_check_eventids.ipynb
-  card_image_url: examples/biodiversity/quality-control-resized.jpg
-  tags:
-    - pyobis
-    - biodiversité
-    - python
-    - darwin core (DwC)
-
-- title: PyObis - check fields
-  description: Validation des données obligatoires dans les archives Darwin Core
-  context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/
-  source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/Demonstration_PyObis_fonction_check_fields.ipynb
-  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDemonstration_PyObis_fonction_check_fields.ipynb
-  card_image_url: examples/biodiversity/quality-control-resized.jpg
-  tags:
-    - pyobis
-    - biodiversité
-    - python
-    - darwin core (DwC)
-
-- title: PyObis - check scientific names
-  description: Validation des termes et identifiants scientifiques utilisés dans les archives Darwin Core
-  context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/
-  source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/Demonstration_PyObis_fonction_fonction_check_scientificname_and_ids.ipynb
-  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDemonstration_PyObis_fonction_fonction_check_scientificname_and_ids.ipynb
-  card_image_url: examples/biodiversity/corail-resized.jpg
-  tags:
-    - pyobis
-    - biodiversité
-    - python
-    - darwin core (DwC)
-
-- title: DwC - Aggrégation de fichiers
-  description: Aggrégations de fichiers Darwin Core pour analyse et/ou visualisation
-  context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/
-  source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/DwC_file_merge.ipynb
-  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDwC_file_merge.ipynb
-  card_image_url: examples/biodiversity/dwc-merge-size.png
-  tags:
-    - biodiversité
-    - R
-    - darwin core (DwC)
