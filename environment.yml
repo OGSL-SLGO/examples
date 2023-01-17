@@ -10,6 +10,7 @@ dependencies:
   - numpy
   - nbformat
   - r-base
+  - r-tidyverse
   - pip
   - pip:
       - git+https://github.com/cioos-siooc/pyobistools@main#egg=pyobistools
