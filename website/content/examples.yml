@@ -8,6 +8,7 @@
     - ctd
     - série-temporelle
     - océanographie
+    - python
 
 - title: Visualisation de données CTD (séries temporelles) - Partie 2
   description: Affichage de données CTD sous forme de série temporelle
@@ -19,6 +20,7 @@
     - ctd
     - série-temporelle
     - océanographie
+    - python
 
 - title: Visualisation de données CTD (profil) - Partie 1
   description: Exploration et sélection de données dans un jeu de données
@@ -30,6 +32,7 @@
     - ctd
     - profil
     - océanographie
+    - python
 
 - title: Visualisation de données CTD (profil) - Partie 2
   description: Affichage de données CTD sous forme de profil
@@ -51,6 +54,8 @@
   tags:
     - pyobis
     - biodiversité
+    - python
+    - darwin code (dwc)
 
 - title: PyObis - check fields
   description: Validation des données obligatoires dans les archives Darwin Core
@@ -61,6 +66,8 @@
   tags:
     - pyobis
     - biodiversité
+    - python
+    - darwin code (dwc)
 
 - title: PyObis - check scientific names
   description: Validation des termes et identifiants scientifiques utilisés dans les archives Darwin Core
@@ -71,3 +78,17 @@
   tags:
     - pyobis
     - biodiversité
+    - python
+    - darwin core (DwC)
+    
+- title: DwC - Aggrégation de fichiers
+  description: Aggrégations de fichiers Darwin Core pour analyse et/ou visualisation
+  context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/
+  source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/DwC_file_merge.ipynb
+  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDwC_file_merge.ipynb
+  card_image_url: examples/biodiversity/corail-resized.jpg
+  tags:
+    - pyobis
+    - biodiversité
+    - R
+    - darwin core (DwC)
