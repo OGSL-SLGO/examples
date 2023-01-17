@@ -55,7 +55,7 @@
     - pyobis
     - biodiversité
     - python
-    - darwin code (dwc)
+    - darwin core (DwC)
 
 - title: PyObis - check fields
   description: Validation des données obligatoires dans les archives Darwin Core
@@ -67,7 +67,7 @@
     - pyobis
     - biodiversité
     - python
-    - darwin code (dwc)
+    - darwin core (DwC)
 
 - title: PyObis - check scientific names
   description: Validation des termes et identifiants scientifiques utilisés dans les archives Darwin Core
