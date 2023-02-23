@@ -15,5 +15,3 @@ dependencies:
       - git+https://github.com/cioos-siooc/pyobistools@main#egg=pyobistools
       - nest_asyncio
       - ipykernel
-      - kaleido
-
