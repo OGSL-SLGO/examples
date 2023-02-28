@@ -1,5 +1,5 @@
-- title: DwC - Aggrégation de fichiers
-  description: Aggrégations de fichiers Darwin Core pour analyse et/ou visualisation
+- title: DwC - Agrégation de fichiers
+  description: Agrégations de fichiers Darwin Core pour analyse et/ou visualisation
   context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/
   source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/DwC_file_merge.ipynb
   binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDwC_file_merge.ipynb
