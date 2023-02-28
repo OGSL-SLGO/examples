@@ -1,4 +1,4 @@
-# Exemple d'utilisation d'un jeu de données CTD sous forme de séries temporelles
+# Exemple d'utilisation d'un jeu de données CTD sous forme de profils
 
 Cet exemple utilise le jeu de données https://doi.org/10.26071/ogsl-f1521dd5-d3a6
 
