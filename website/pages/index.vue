@@ -1,32 +1,68 @@
 <template>
   <div>
     <div class="header">
-      <div class="banner">Ce site est en cours de développement. Si vous avez des idées d'améliorations (affichage, contenu, dépot github, etc...), vous pouvez remplir le formulaire suivant: <a style="color: white;" href="https://forms.gle/JmeAChdNqUMGMZBQA">https://forms.gle/JmeAChdNqUMGMZBQA</a></div>
+      <div class="banner">
+        Ce site est en cours de développement. Si vous avez des idées
+        d'améliorations (affichage, contenu, dépot github, etc...), nous serions
+        heureux de les connaître! Vous pouvez écrire dans notre formulaire de
+        retours:
+        <a style="color: white" href="https://forms.gle/JmeAChdNqUMGMZBQA"
+          >https://forms.gle/JmeAChdNqUMGMZBQA</a
+        >
+      </div>
       <div class="site-title">Galerie d'exemples</div>
-      <div class="ogsl-logo"><a href="https://ogsl.ca"><img src="~/assets/logo_ogsl.svg" /></a></div>
+      <div class="ogsl-logo">
+        <a href="https://ogsl.ca"><img src="~/assets/logo_ogsl.svg" /></a>
+      </div>
       <div class="search-box">
         <SearchBox v-model="examplesSearchQuery" />
       </div>
     </div>
     <div class="card-container">
-      <div class="card" v-for="example in filteredExamples" :key="example.title">
-        <div class="card-image"><img :src="example.card_image_url" />
-        </div>
+      <div
+        class="card"
+        v-for="example in filteredExamples"
+        :key="example.title"
+      >
+        <div class="card-image"><img :src="example.card_image_url" /></div>
         <div class="card-description">
           <h1>
-            <HighlightableText :content="example.title" :highlightRegex="searchRegex" />
+            <HighlightableText
+              :content="example.title"
+              :highlightRegex="searchRegex"
+            />
           </h1>
           <p style="margin-bottom: 10px">
-            <HighlightableText :content="example.description" :highlightRegex="searchRegex" />
+            <HighlightableText
+              :content="example.description"
+              :highlightRegex="searchRegex"
+            />
           </p>
-          <div style="margin-bottom: 10px;">
-            <HighlightableText class="tag" v-for="tag in example.tags" :key="tag"
-              @click="examplesSearchQuery = '#' + tag" :content="'#' + tag" :highlightRegex="searchRegex" />
+          <div style="margin-bottom: 10px">
+            <HighlightableText
+              class="tag"
+              v-for="tag in example.tags"
+              :key="tag"
+              @click="examplesSearchQuery = '#' + tag"
+              :content="'#' + tag"
+              :highlightRegex="searchRegex"
+            />
           </div>
-          <a :href="example.context_url" class="link-button" style="margin-right: 10px;">Contexte</a>
-          <a :href="example.source_url" class="link-button" style="margin-right: 10px;">Aller vers
-            le notebook</a>
-          <a :href="example.binder_url" class="link-button">Lancer avec Binder</a>
+          <a
+            :href="example.context_url"
+            class="link-button"
+            style="margin-right: 10px"
+            >Contexte</a
+          >
+          <a
+            :href="example.source_url"
+            class="link-button"
+            style="margin-right: 10px"
+            >Aller vers le notebook</a
+          >
+          <a :href="example.binder_url" class="link-button"
+            >Lancer avec Binder</a
+          >
         </div>
       </div>
     </div>
@@ -34,20 +70,29 @@
 </template>
 
 <script setup>
-import { createTextSearchRegex } from "@/utils/regex"
+import { createTextSearchRegex } from "@/utils/regex";
 
 useHead({
   title: "Galerie d'exemples",
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
-  charset: 'utf-8',
-  meta: [{ name: 'description', content: "Exemples, supports de formations, outils pédagogiques autour de l'utilisation de données ouverte" }],
-  link: [{ rel: 'icon', type: 'image/png', href: 'ofavicon.ico' }],
-})
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  charset: "utf-8",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Exemples, supports de formations, outils pédagogiques autour de l'utilisation de données ouverte",
+    },
+  ],
+  link: [{ rel: "icon", type: "image/png", href: "ofavicon.ico" }],
+});
 
-const queryResult = await queryContent().where({ _file: "examples.yml" }).only(['body']).find()
-const allExamples = queryResult[0].body
+const queryResult = await queryContent()
+  .where({ _file: "examples.yml" })
+  .only(["body"])
+  .find();
+const allExamples = queryResult[0].body;
 
-const examplesSearchQuery = ref('')
+const examplesSearchQuery = ref("");
 
 const filteredExamples = computed(() => {
   if (examplesSearchQuery.value === "") return allExamples;
@@ -57,26 +102,29 @@ const filteredExamples = computed(() => {
     case examplesSearchQuery.value.startsWith("#"):
       filter_ = function (example) {
         for (const tag of example.tags) {
-          if (tag.includes(examplesSearchQuery.value.substring(1))) return true
+          if (tag.includes(examplesSearchQuery.value.substring(1))) return true;
         }
-      }
+      };
       break;
     default:
       filter_ = function (example) {
-        for (const text of [example.title, example.description, ...example.tags]) {
-          if (text.match(searchRegex.value)) return true
+        for (const text of [
+          example.title,
+          example.description,
+          ...example.tags,
+        ]) {
+          if (text.match(searchRegex.value)) return true;
         }
-      }
+      };
   }
-  return allExamples.filter(filter_)
-
-})
+  return allExamples.filter(filter_);
+});
 
 const searchRegex = computed(() => {
   if (examplesSearchQuery.value === "") return null;
 
   return createTextSearchRegex(examplesSearchQuery.value);
-})
+});
 </script>
 
 <style lang="scss" scoped>
@@ -129,12 +177,12 @@ const searchRegex = computed(() => {
 .ogsl-logo {
   grid-area: logo;
 
-  >a>img {
+  > a > img {
     max-height: 20px;
   }
 
   @media screen and (min-width: 550px) {
-    >a>img {
+    > a > img {
       max-height: 30px;
     }
   }
@@ -169,7 +217,7 @@ const searchRegex = computed(() => {
 }
 
 .card-image {
-  >img {
+  > img {
     border-radius: 10px;
     width: 100%;
     height: 100px;
@@ -179,7 +227,7 @@ const searchRegex = computed(() => {
   @media screen and (min-width: 550px) {
     grid-column: 1;
 
-    >img {
+    > img {
       height: 100%;
     }
   }
@@ -188,21 +236,20 @@ const searchRegex = computed(() => {
 .card-description {
   padding: 10px;
 
-  >h1 {
+  > h1 {
     font-size: 1.2em;
     margin-top: 0px;
-    color: #00adef
+    color: #00adef;
   }
 
   @media screen and (min-width: 550px) {
     grid-column: 2;
     padding: 20px;
 
-    >h1 {
+    > h1 {
       font-size: 1.5em;
     }
   }
-
 }
 
 .tag {
@@ -220,12 +267,12 @@ const searchRegex = computed(() => {
   text-decoration: none;
   color: #00adef;
   font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: small;
   display: inline-block;
 
   &:not(:last-child) {
-    $separator: '\00a0\00a0\25CF';
+    $separator: "\00a0\00a0\25CF";
 
     &:after {
       content: $separator;
@@ -240,11 +287,11 @@ const searchRegex = computed(() => {
     color: #1e4659;
 
     &:before {
-      content: "> "
+      content: "> ";
     }
 
     &:after {
-      content: " <"
+      content: " <";
     }
   }
 }
