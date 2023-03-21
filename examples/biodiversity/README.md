@@ -1,14 +1,14 @@
-# Exemples de manipulations d'archives darwin core (DwC)
+# Exemples de manipulations d'archives Darwin Core (DwC)
 
 ## Utilisation d'une archive DwC à des fins d'analyse
 
 Le notebook [DwC_file_merge.ipynb](DwC_file_merge.ipynb)
-présente comment procéder à l'aggrégation des fichiers DarwinCore en un seul fichier afin de permettre la réalisation d'analyses et\ou de visualisation.
+présente comment procéder à l'agrégation des fichiers Darwin Core en un seul fichier afin de permettre la réalisation d'analyses et\ou de visualisations.
 > Ce notebook est codé en R
 
 ## Validation d'archives DwC avec la librairie PyObis (librairie Python)
 
-Cette séries d'exemple est composée des notebooks suivants:
+Cette séries d'exemples est composée des notebooks suivants:
 
 - [Demonstration_PyObis_fonction_check_eventids.ipynb](Demonstration_PyObis_fonction_check_eventids.ipynb)
   > Validation des event ids
@@ -20,7 +20,7 @@ Cette séries d'exemple est composée des notebooks suivants:
 ## Exécuter localement
 
 - Les outils nécessaires à l'exécutions de notebooks jupyter. (voir: https://code.visualstudio.com/ ou https://jupyter.org/)
-- Installer les dépendences de **environment.yml**
+- Installer les dépendances de **environment.yml**
   > - Installer Anaconda: `https://www.anaconda.com/products/distribution`
   > - Créer un environnement virtuel avec Conda: `conda env create -f environment.yml`
 
