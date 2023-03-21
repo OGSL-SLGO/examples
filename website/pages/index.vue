@@ -1,8 +1,9 @@
 <template>
   <div>
     <div class="header">
-      <div class="site-title">Gallerie d'exemples</div>
-      <div class="ogsl-logo"><img src="~/assets/logo_ogsl.svg" /></div>
+      <div class="banner">Ce site est en cours de développement. Si vous avez des idées d'améliorations (affichage, contenu, dépot github, etc...), vous pouvez remplir le formulaire suivant: <a style="color: white;" href="https://forms.gle/JmeAChdNqUMGMZBQA">https://forms.gle/JmeAChdNqUMGMZBQA</a></div>
+      <div class="site-title">Galerie d'exemples</div>
+      <div class="ogsl-logo"><a href="https://ogsl.ca"><img src="~/assets/logo_ogsl.svg" /></a></div>
       <div class="search-box">
         <SearchBox v-model="examplesSearchQuery" />
       </div>
@@ -22,10 +23,10 @@
             <HighlightableText class="tag" v-for="tag in example.tags" :key="tag"
               @click="examplesSearchQuery = '#' + tag" :content="'#' + tag" :highlightRegex="searchRegex" />
           </div>
-          <a target="_blank" :href="example.context_url" class="link-button" style="margin-right: 10px;">Contexte</a>
-          <a target="_blank" :href="example.source_url" class="link-button" style="margin-right: 10px;">Aller vers
+          <a :href="example.context_url" class="link-button" style="margin-right: 10px;">Contexte</a>
+          <a :href="example.source_url" class="link-button" style="margin-right: 10px;">Aller vers
             le notebook</a>
-          <a target="_blank" :href="example.binder_url" class="link-button">Lancer avec Binder</a>
+          <a :href="example.binder_url" class="link-button">Lancer avec Binder</a>
         </div>
       </div>
     </div>
@@ -36,7 +37,7 @@
 import { createTextSearchRegex } from "@/utils/regex"
 
 useHead({
-  title: "Gallerie d'exemples",
+  title: "Galerie d'exemples",
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   charset: 'utf-8',
   meta: [{ name: 'description', content: "Exemples, supports de formations, outils pédagogiques autour de l'utilisation de données ouverte" }],
@@ -87,6 +88,7 @@ const searchRegex = computed(() => {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-areas:
+    "banner banner"
     "logo title"
     "search search";
   row-gap: 5px;
@@ -95,8 +97,23 @@ const searchRegex = computed(() => {
   @media screen and (min-width: 550px) {
     grid-template-columns: 1fr 1fr 2fr;
     grid-template-areas:
+      "banner banner banner"
       "logo search title";
   }
+}
+
+.banner {
+  grid-area: banner;
+  color: #ffffff;
+  background-color: #00adef;
+  border-color: #1f353d;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .site-title {
@@ -112,12 +129,12 @@ const searchRegex = computed(() => {
 .ogsl-logo {
   grid-area: logo;
 
-  >img {
+  >a>img {
     max-height: 20px;
   }
 
   @media screen and (min-width: 550px) {
-    >img {
+    >a>img {
       max-height: 30px;
     }
   }
