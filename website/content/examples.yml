@@ -92,3 +92,13 @@
     - profil
     - océanographie
 
+- title: Utilisation de données géologiques avec ERDDAP - Exemple_1
+  description: Un exemple d'analyse de données géologiques provenant de ERDDAP.
+  context_url:  https://github.com/ogsl-slgo/examples/tree/main/examples/geology/
+  source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/geology/example_1.ipynb
+  card_image_url: examples/geology/well_chart.png
+  tags:
+    - erddap
+    - géologie
+    - graphique puit
+    - python
