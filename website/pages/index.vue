@@ -60,9 +60,6 @@
             style="margin-right: 10px"
             >Aller vers le notebook</a
           >
-          <a :href="example.binder_url" class="link-button"
-            >Lancer avec Binder</a
-          >
         </div>
       </div>
     </div>

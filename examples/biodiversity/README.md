@@ -4,6 +4,7 @@
 
 Le notebook [DwC_file_merge.ipynb](DwC_file_merge.ipynb)
 présente comment procéder à l'agrégation des fichiers Darwin Core en un seul fichier afin de permettre la réalisation d'analyses et\ou de visualisations.
+
 > Ce notebook est codé en R
 
 ## Validation d'archives DwC avec la librairie PyObis (librairie Python)
@@ -23,11 +24,3 @@ Cette séries d'exemples est composée des notebooks suivants:
 - Installer les dépendances de **environment.yml**
   > - Installer Anaconda: `https://www.anaconda.com/products/distribution`
   > - Créer un environnement virtuel avec Conda: `conda env create -f environment.yml`
-
-## Exécuter en ligne avec **mybinder.org**
-
-- DwC_file_merge.ipynb: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDwC_file_merge.ipynb)
-
-- Demonstration_PyObis_fonction_check_eventids.ipynb: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDemonstration_PyObis_fonction_check_eventids.ipynb)
-- Demonstration_PyObis_fonction_check_fields.ipynb: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2F2Fbiodiversity%2FDemonstration_PyObis_fonction_check_fields.ipynb)
-- Demonstration_PyObis_fonction_fonction_check_scientificname_and_ids.ipynb: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiersity%2FDemonstration_PyObis_fonction_fonction_check_scientificname_and_ids.ipynb)

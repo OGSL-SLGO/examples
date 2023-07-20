@@ -1,8 +1,19 @@
+- title: Utilisation de données géologiques avec ERDDAP - Exemple_1
+  description: Un exemple d'analyse de données géologiques provenant de ERDDAP.
+  context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/geology/
+  source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/geology/example_1.ipynb
+  card_image_url: examples/geology/well_chart.png
+  tags:
+    - erddap
+    - géologie
+    - graphique puit
+    - munsell
+    - python
+
 - title: DwC - Agrégation de fichiers
   description: Agrégations de fichiers Darwin Core pour analyse et/ou visualisation
   context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/
   source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/DwC_file_merge.ipynb
-  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDwC_file_merge.ipynb
   card_image_url: examples/biodiversity/dwc-merge-size.png
   tags:
     - biodiversité
@@ -13,7 +24,6 @@
   description: Validation la cohérence des events ids dans les archives Darwin Core
   context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/
   source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/Demonstration_PyObis_fonction_check_eventids.ipynb
-  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDemonstration_PyObis_fonction_check_eventids.ipynb
   card_image_url: examples/biodiversity/quality-control-resized.jpg
   tags:
     - pyobis
@@ -25,7 +35,6 @@
   description: Validation des données obligatoires dans les archives Darwin Core
   context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/
   source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/Demonstration_PyObis_fonction_check_fields.ipynb
-  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDemonstration_PyObis_fonction_check_fields.ipynb
   card_image_url: examples/biodiversity/quality-control-resized.jpg
   tags:
     - pyobis
@@ -37,7 +46,6 @@
   description: Validation des termes et identifiants scientifiques utilisés dans les archives Darwin Core
   context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/
   source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/biodiversity/Demonstration_PyObis_fonction_fonction_check_scientificname_and_ids.ipynb
-  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fbiodiversity%2FDemonstration_PyObis_fonction_fonction_check_scientificname_and_ids.ipynb
   card_image_url: examples/biodiversity/corail-resized.jpg
   tags:
     - pyobis
@@ -49,7 +57,6 @@
   description: Exploration et sélection de données dans un jeu de données
   context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-time-series/
   source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-time-series/partie_1.ipynb
-  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fctd-time-series%2Fpartie_1.ipynb
   card_image_url: examples/ctd-time-series/partie_1.png
   tags:
     - ctd
@@ -61,7 +68,6 @@
   description: Affichage de données CTD sous forme de série temporelle
   context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-time-series/
   source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-time-series/partie_2.ipynb
-  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fctd-time-series%2Fpartie_2.ipynb
   card_image_url: examples/ctd-time-series/partie_2.png
   tags:
     - ctd
@@ -73,7 +79,6 @@
   description: Exploration et sélection de données dans un jeu de données
   context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-profile/
   source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-profile/partie_1.ipynb
-  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fctd-profile%2Fpartie_1.ipynb
   card_image_url: examples/ctd-profile/partie_1.png
   tags:
     - ctd
@@ -85,10 +90,8 @@
   description: Affichage de données CTD sous forme de profil
   context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-profile/
   source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/ctd-profile/partie_2.ipynb
-  binder_url: https://mybinder.org/v2/gh/ogsl-slgo/examples/main?labpath=examples%2Fctd-profile%2Fpartie_2.ipynb
   card_image_url: examples/ctd-profile/partie_2.png
   tags:
     - ctd
     - profil
     - océanographie
-
