@@ -18,14 +18,10 @@ Les trois premiers graphiques affichent les teneurs en Ti, Fe et Mn sous forme d
 
 2. Clonez le dépôt et naviguez vers le répertoire contenant le notebook.
 
-3. Installez les dépendances du projet. Un fichier **requirement.txt** devrait être disponible dans le répertoire du projet avec toutes les dépendances requises.   
-`pip install -r requirements.txt`
+3. Installez les dépendances du projet. Un fichier **requirement.txt** devrait être disponible dans le répertoire du projet avec toutes les dépendances requises.  
+   `pip install -r requirements.txt`
 
 4. Ouvrez le notebook et exécutez les cellules.
-
-### En ligne avec **mybinder.org**
-
-Cliquez sur le lien ci-dessus pour exécuter le notebook interactif sur Binder.
 
 ## Contact et contribution
 
