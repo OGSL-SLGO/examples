@@ -1,11 +1,14 @@
-- title: Affichage d'un graphique puit
-  description: Affichage de données géologiques sous forme d'un graphique puit avec les couleurs munsell
+- title: Utilisation de données géologiques avec ERDDAP - Exemple_1
+  description: Un exemple d'analyse de données géologiques provenant de ERDDAP.
   context_url: https://github.com/ogsl-slgo/examples/tree/main/examples/geology/
   source_url: https://github.com/ogsl-slgo/examples/tree/main/examples/geology/example_1.ipynb
-  card_image_url: examples/geology/graphique-puit.png
+  card_image_url: examples/geology/well_chart.png
   tags:
-    - geology
+    - erddap
+    - géologie
+    - graphique puit
     - munsell
+    - python
 
 - title: DwC - Agrégation de fichiers
   description: Agrégations de fichiers Darwin Core pour analyse et/ou visualisation
